@@ -2,6 +2,8 @@
 
 let storesSection = document.getElementById('stores');
 
+let storesForm = document.getElementById('my-form');
+
 let tableElem = document.createElement('table');
 storesSection.appendChild(tableElem);
 
@@ -98,3 +100,21 @@ function renderAllStores(){
 
 headerRow();
 renderAllStores();
+
+function handleSummit(event){
+  event.preventDefault();
+
+  let name = event.target.name.value;
+  let custMin = +event.target.custMin.value;
+  let custMax = +event.target.custMax.value;
+  let avg = +event.target.avg.value;
+
+  let newStore = new Stores(name, custMin, custMax, avg);
+
+  newStore.getCust();
+  newStore.render();
+
+  storesForm.reset();
+}
+
+storesForm.addEventListener('submit', handleSummit);

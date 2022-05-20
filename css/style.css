@@ -6,6 +6,9 @@ body {
 
 header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
   height: 100px;
 }
 
@@ -23,11 +26,13 @@ header h1 {
 
 header img {
   margin-left: auto;
+  max-width: 200px;
   padding: 5px;
 }
 
 .about {
   display: flex;
+  justify-content: center;
   margin-bottom: 15px;
 }
 

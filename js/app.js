@@ -82,6 +82,33 @@ function headerRow (){
   trElem.appendChild(th3Elem);
 }
 
+// function footerRow (){
+//   let footElem = document.createElement('tfoot');
+//   tableElem.appendChild(footElem);
+
+//   let lastRow = document.createElement('tr');
+//   footElem.appendChild(lastRow);
+
+//   let tdElem = document.createElement('td');
+//   tdElem.textContent = 'Totals';
+//   lastRow.appendChild(tdElem);
+
+//   let grandTotal = 0;
+
+//   for (let i = 0; i < hours.length; i++){
+//     let hoursTotal = 0;
+//     for (j = 0; j < storeLocations.length; j++){
+//       hoursTotal += storeLocations[j].cookieArr[i];
+//       grandTotal += storeLocations[j].cookieArr[i];
+//     }
+
+//   }
+
+//   let totalCell = document.createElement('td');
+//   totalCell.textContent = `${hoursTotal}`;
+//   lastRow.appendChild(total);
+// }
+
 new Stores('Seattle', 23, 65, 6.3);
 
 new Stores('Tokyo', 3, 24, 1.2);
@@ -111,6 +138,8 @@ function handleSummit(event){
 
   let newStore = new Stores(name, custMin, custMax, avg);
 
+  // storeLocations.deleteRow(-1);
+  // document.querySelector('tfoot').remove();
   newStore.getCust();
   newStore.render();
 

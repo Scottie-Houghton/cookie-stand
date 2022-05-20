@@ -1,0 +1,125 @@
+body {
+  background-color: #fb8500;
+  color: #07708a;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 100px;
+}
+
+header a {
+  text-decoration: none;
+  font-size: x-large;
+  color: #07708a;
+  margin-right: auto;
+}
+
+header h1 {
+  font-size: xx-large;
+  text-align: center;
+}
+
+header img {
+  margin-left: auto;
+  max-width: 200px;
+  padding: 5px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.about p {
+  width: 500px;
+}
+
+.about img {
+  width: 500px;
+}
+
+.seattle {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.seattle img {
+  height: 175px;
+  margin-left: 50px;
+}
+
+.seattle div {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.tokyo {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.tokyo div {
+  margin-left: 50px;
+}
+
+.tokyo img {
+  height: 175px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.dubai {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.dubai img {
+  height: 175px;
+  margin-left: 50px;
+}
+
+.dubai div {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.paris {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.paris div {
+  margin-left: 50px;
+}
+
+.paris img {
+  height: 175px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.lima {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.lima img {
+  height: 175px;
+  margin-left: 50px;
+}
+
+.lima div {
+  margin-left: auto;
+  margin-right: 50px;
+}

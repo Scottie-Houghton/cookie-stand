@@ -1,39 +1,55 @@
 body {
   background-color: #fb8500;
   color: #07708a;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-header {
+.main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
   height: 100px;
+  border-bottom-width: 10px;
+  color: #023047;
+  border-color: #023047;
+  border-style: solid;
+  margin-bottom: 15px;
 }
 
-header a {
+.main-header a {
   text-decoration: none;
-  font-size: x-large;
-  color: #07708a;
+  font-size: large;
+  font-weight: bold;
+  color: #023047;
   margin-right: auto;
+  padding-left: 20px;
 }
 
-header h1 {
+.main-header h1 {
+  font-family: 'Lobster', cursive;
   font-size: xx-large;
+  font-weight: 900;
+  font-variant: small-caps;
   text-align: center;
 }
 
-header img {
+.main-header img {
   margin-left: auto;
   max-width: 200px;
-  padding: 5px;
+  padding-right:20px;
 }
 
 .about {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 25px;
+}
+
+.about h2 {
+  font-size: larger;
+  font-weight: bolder;
+  font-variant: small-caps;
 }
 
 .about p {
@@ -46,13 +62,16 @@ header img {
 
 .seattle {
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 25px;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
 }
 
 .seattle img {
   height: 175px;
-  margin-left: 50px;
+  padding: 20px;
 }
 
 .seattle div {
@@ -60,31 +79,59 @@ header img {
   margin-right: 50px;
 }
 
+.seattle div h3 {
+  font-size: large;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+#seattle-hours {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
 .tokyo {
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 25px;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
 }
 
 .tokyo div {
   margin-left: 50px;
 }
 
+.tokyo div h3 {
+  font-size: large;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+#tokyo-hours {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
 .tokyo img {
   height: 175px;
   margin-left: auto;
-  margin-right: 50px;
+  padding: 20px;
 }
 
 .dubai {
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 25px;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
 }
 
 .dubai img {
   height: 175px;
-  margin-left: 50px;
+  padding: 20px;
 }
 
 .dubai div {
@@ -92,34 +139,98 @@ header img {
   margin-right: 50px;
 }
 
+.dubai div h3 {
+  font-size: large;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+#dubai-hours {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
 .paris {
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 25px;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
 }
 
 .paris div {
   margin-left: 50px;
 }
 
+.paris div h3 {
+  font-size: large;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+#paris-hours {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
 .paris img {
   height: 175px;
   margin-left: auto;
-  margin-right: 50px;
+  padding: 20px;
 }
 
 .lima {
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 25px;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
 }
 
 .lima img {
   height: 175px;
-  margin-left: 50px;
+  padding: 20px;
 }
 
 .lima div {
   margin-left: auto;
   margin-right: 50px;
+}
+
+.lima div h3 {
+  font-size: large;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+#lima-hours {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+.stores {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8ecae6;
+  background-color: #fb5c00;
+}
+
+footer {
+  margin: 10px;
+  height: 50px;
+}
+
+footer a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #07708a;
+}
+
+#link-home {
+  color: #8ecae6;
 }

@@ -58,7 +58,6 @@ Stores.prototype.render = function(){
     tdElem.textContent = this.cookieArr[i];
     trElem.appendChild(tdElem);
   }
-    
   let tdElem = document.createElement('td');
   tdElem.textContent = this.total;
   trElem.appendChild(tdElem);
@@ -82,32 +81,35 @@ function headerRow (){
   trElem.appendChild(th3Elem);
 }
 
-// function footerRow (){
-//   let footElem = document.createElement('tfoot');
-//   tableElem.appendChild(footElem);
+function footerRow (){
+  let footElem = document.createElement('tfoot');
+  tableElem.appendChild(footElem);
 
-//   let lastRow = document.createElement('tr');
-//   footElem.appendChild(lastRow);
+  let lastRow = document.createElement('tr');
+  footElem.appendChild(lastRow);
 
-//   let tdElem = document.createElement('td');
-//   tdElem.textContent = 'Totals';
-//   lastRow.appendChild(tdElem);
+  let tdElem = document.createElement('th');
+  tdElem.textContent = 'Totals';
+  lastRow.appendChild(tdElem);
 
-//   let grandTotal = 0;
+  let grandTotal = 0;
 
-//   for (let i = 0; i < hours.length; i++){
-//     let hoursTotal = 0;
-//     for (j = 0; j < storeLocations.length; j++){
-//       hoursTotal += storeLocations[j].cookieArr[i];
-//       grandTotal += storeLocations[j].cookieArr[i];
-//     }
+  for (let i = 0; i < hours.length; i++){
+    let hoursTotal = 0;
+    for (let j = 0; j < storeLocations.length; j++){
+      hoursTotal += storeLocations[j].cookieArr[i];
+      grandTotal += storeLocations[j].cookieArr[i];
+    }
+    let totalCell = document.createElement('td');
+    totalCell.textContent = `${hoursTotal}`;
+    lastRow.appendChild(totalCell);
+  }
 
-//   }
+  let grandTotalCell =document.createElement('td');
+  grandTotalCell.textContent = `${grandTotal}`;
+  lastRow.appendChild(grandTotalCell);
 
-//   let totalCell = document.createElement('td');
-//   totalCell.textContent = `${hoursTotal}`;
-//   lastRow.appendChild(total);
-// }
+}
 
 new Stores('Seattle', 23, 65, 6.3);
 
@@ -127,6 +129,7 @@ function renderAllStores(){
 
 headerRow();
 renderAllStores();
+footerRow();
 
 function handleSummit(event){
   event.preventDefault();
@@ -138,10 +141,10 @@ function handleSummit(event){
 
   let newStore = new Stores(name, custMin, custMax, avg);
 
-  // storeLocations.deleteRow(-1);
-  // document.querySelector('tfoot').remove();
+  document.querySelector('tfoot').remove();
   newStore.getCust();
   newStore.render();
+  footerRow();
 
   storesForm.reset();
 }
